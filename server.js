@@ -24,11 +24,11 @@ server.get('/test', (req, res) => {
     res.status(202).json({message: 'the server is running at ' + currentTime})
 })
 
-//@desc         Catchall path
-//@route        GET *
-// server.get('*', (req,res)=>{ 
-//     res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
-//  })
+// @desc         Catchall path
+// @route        GET *
+server.get('*', (req,res)=>{ 
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+ })
 
  server.listen(PORT, ()=>{
      console.log(`*** smoking on port ${PORT} ***`.random)
