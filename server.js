@@ -15,7 +15,7 @@ server.use(express.static(path.join(__dirname, 'client/build')))
 const currentTime = new Date().toDateString()
 
 server.get('/', (req,res)=>{ 
-    res.status(202).json({message: "what's in the fridge?"})
+    res.status(202).json({message: "broccoli"})
  })
 
 // @desc		Test end is working
